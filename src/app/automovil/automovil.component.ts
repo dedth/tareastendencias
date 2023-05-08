@@ -12,6 +12,13 @@ export class AutomovilComponent {
   year: Date = new Date();
   kilometraje: number = 0;
   estado: boolean = false;
+  rin: number =0;
+  modo: string ='';
+  opcion: string = '';
+  precio: number = 0;
+  cantidad: number =0 ;
+  fechaCompra:Date = new Date(); 
+  color: string = ''; 
 
   form: FormGroup;//Reactive Form
 
@@ -26,7 +33,8 @@ export class AutomovilComponent {
       opcion: ['', [Validators.required]],
       precio: ['', [Validators.required]],
       cantidad: ['', [Validators.required]],
-      fechaCompra: ['', [Validators.required]],
+      fechaCompra: [new Date()],
+      color: ['', [Validators.required]],
       state: [false,[]],
     })
   }

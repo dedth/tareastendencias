@@ -70,7 +70,7 @@ class="position-absolute top-50 start-50 translate-middle badge text-bg-primary"
 
         <div class="col-md">
           <div class="form-floating">
-            <select class="form-select" id="floatingSelectGrid" formControlName="opcion">
+            <select class="form-select" type="chec" id="floatingSelectGrid" formControlName="opcion">
               <option value="1">Diesel</option>
               <option value="2">Gasolina</option>
               
@@ -93,6 +93,13 @@ class="position-absolute top-50 start-50 translate-middle badge text-bg-primary"
           <div class="row g-1">
             <div class="col">
               <input type="date" class="form-control" placeholder="Fecha" aria-label="First name" formControlName="fechaCompra">
+            </div>
+          </div>
+
+          <div class="row g-2">
+            <div class="col">
+                <label for="floatingSelectGrid">Color</label>
+              <input type="color" class="form-control"  aria-label="First name" formControlName="color">
             </div>
           </div>
 
