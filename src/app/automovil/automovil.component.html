@@ -1,0 +1,104 @@
+<br><br>
+<h1>NgModel</h1>
+
+<label for="name">Name:</label>
+<br>
+<input type="text" [(ngModel)]="modelo">
+<br>
+{{modelo}}
+
+<h1>Reactive Forms</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3 "
+class="position-absolute top-50 start-50 translate-middle badge text-bg-primary" >
+<div class="row g-2 ">
+    <label>Modelo:</label>
+    <br>
+    <input type="text" class="form-control " formControlName="modelo">
+    <br>
+    <small *ngIf="form.controls['modelo'].errors 
+    && form.controls['modelo'].touched" style="color: rgb(255, 119, 119);">
+        Campo obligatorio
+    </small>
+    <br>
+
+    <label>Placa:</label>
+    <br>
+    <input type="text" class="form-control"  formControlName="placa" >
+
+    <br>
+    <label>Año:</label>
+    <br>
+    <input type="text" class="form-control"  formControlName="year">
+    <br>
+    <small *ngIf="form.controls['year'].errors 
+    && form.controls['year'].touched" style="color: rgb(255, 119, 119);">
+        Campo obligatorio
+    </small>
+    <br>
+
+    <label>Kilometraje:</label>
+    <br>
+    <input type="number" class="form-control"  formControlName="kilometraje">
+    <br>
+
+   
+    
+    <div class="col-md ">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" formControlName="rin">
+            <option value="1">13</option>
+            <option value="2">14</option>
+            <option value="3">15</option>
+            <option value="4">16</option>
+            
+          </select>
+          <label for="floatingSelectGrid">Ring </label>
+        </div>
+      </div>
+
+        
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelectGrid" formControlName="modo">
+              <option value="1">Automatico</option>
+              <option value="2">Manual</option>
+              
+            </select>
+            <label for="floatingSelectGrid">Modo</label>
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelectGrid" formControlName="opcion">
+              <option value="1">Diesel</option>
+              <option value="2">Gasolina</option>
+              
+            </select>
+            <label for="floatingSelectGrid">Opcion</label>
+          </div>
+        </div>
+    
+
+
+          <div class="row g-1">
+            <div class="col">
+              <input type="number" class="form-control" placeholder="Precio" aria-label="First name" formControlName="precio">
+            </div>
+            <div class="col" >
+              <input type="number" class="form-control" placeholder="cantidad" aria-label="Last name" formControlName="cantidad">
+            </div>
+          </div>
+
+          <div class="row g-1">
+            <div class="col">
+              <input type="date" class="form-control" placeholder="Fecha" aria-label="First name" formControlName="fechaCompra">
+            </div>
+          </div>
+
+
+    <button pButton type="submit" class="btn btn-dark">Guardar</button>
+     
+    </div>
+    
+</form>
